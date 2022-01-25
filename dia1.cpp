@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-	string palabra;
+	string palabra, palabra2, palabra3;
 	int numero1 = 1;
 	int numero2 = 2, numero3 = 3;
 	const int NUMERO = 0;
@@ -16,6 +16,35 @@ int main(){
 	palabra = "casa";
 	cout << palabra << endl;
 	*/
+
+	//palabra = palabra1.append(palabra2);
+	palabra1.append(palabra2);
+	cout << palabra << endl;
+	cout << palabra1 << endl;
+	palabra = "nada";
+	palabra = palabra + " " + palabra2;
+	cout << palabra << endl;
+
+
+	int xint, yint;
+	string xstr, ystr;
+	xint = 10;
+	yint = 20;
+	xstr = "10";
+	ystr = "20";
+	cout << "Aqui se imprime el xint: " << xint << endl;
+	cout << "Aqui se imprime el xstr: " << xstr << endl;
+	cout << "int x+y = " << xint + yint << endl;
+	cout << "xstr + to_string(yint) = " << xstr + to_string(yint) << endl;
+	cout << "stoi(xstr) + yint = " << stoi(xstr) + yint << endl;
+
+	cout << palabra << endl;
+	cout << "La palabra tiene " << palabra.length() << " letras." << endl;
+	cout << "La palabra tiene " << palabra.size() << " letras." << endl;
+	cout << "La primera letra de palabra es: " << palabra[0];
+	
+
+
 	/*//Jugamos con número
 	cout << numero1 << endl;
 	cout << numero2 << endl << numero3 << endl;
