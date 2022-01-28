@@ -19,7 +19,7 @@ void subirNota (int notas[3], int posicion, int nuevaNota){
   notas[posicion] = nuevaNota;
 }
 
-void imprimirArray(int &array[20], int tama){
+void imprimirArray(int array[20], int tama){
   for(int i = 0; i < tama; i++){
     cout << array[i] << endl;
   }
@@ -32,6 +32,8 @@ int main(){
   int num2 = 0;
   int multx5;
   int notas[] = {8, 4, 9};
+  string clave = "gfasa";
+  string clave2;
   /*cout << "¿Cuantos juegos quieres introducir?: ";
   cin >> numJuegos;
 
@@ -54,7 +56,7 @@ int main(){
 
   meMultiplicox5(num1);*/
 
-  cout << "Notas original" << endl;
+  /*cout << "Notas original" << endl;
 
   imprimirArray(notas, 3);
 
@@ -64,13 +66,48 @@ int main(){
 
   cout << "Nota tras subir la nota" << endl;
 
-  imprimirArray(notas, 3);
+  imprimirArray(notas, 3);*/
+
+/*
+  cout << "dime la clave o muere: ";
+  cin >> clave2;
+  while(clave2 != clave){
+    cout << "Repite la clave: ";
+    cin >> clave2;
+  }*/
+
+
+
+
+
+
+
+
+
+
 
   //mostrarArray(juegos);
+
+
+
+
+
+
+
 
   /*Deberes:
   -Rellenar un vector con los 100 primeros numeros.
   -Sumar de 4 en 4 los numeros y sumar en otro vector.
   {0,1,2,3,4,5,6,7} -> {6,22,38,....}*/
+
+
+
+
+
+
+
+
+
+
   return 0;
 }
