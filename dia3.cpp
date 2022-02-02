@@ -100,6 +100,33 @@ int main(){
   -Sumar de 4 en 4 los numeros y sumar en otro vector.
   {0,1,2,3,4,5,6,7} -> {6,22,38,....}*/
 
+  int tama = 100;
+  int num[tama];
+  int sumaNum[tama/4];
+//Rellenamos el array con los 100 primeros nunmeros
+  for (int i = 0; i < tama ; i++){
+    num[i] = i;
+  }
+
+  for (int i = 0; i < tama; i+=4){
+    sumaNum[i/4] = i + i+1 + i+2 + i+3;
+    }
+
+  cout << "otra forma de hacerlo" << endl;
+  int suma = 0;
+  int contador = 0;
+  for(int i = 0; i < tama; i++){
+    suma += i;
+    if(i % 4 == 0){
+      sumaNum[i/4] = suma;
+      suma = 0;
+    }
+    contador++;
+  }
+
+  for (int i = 0; i < tama/4; i++){
+    cout << sumaNum[i] << endl;
+  }
 
 
 
