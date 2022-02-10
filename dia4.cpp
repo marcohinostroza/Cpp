@@ -2,8 +2,17 @@
 using namespace std;
 
 
+int suma10(int num){
+  num += 10;
+
+  return num;
+}
 
 
+int suma10(int* ptrNum){
+  *ptrNum += 10;
+  return *ptrNum;
+}
 
 
 
@@ -13,15 +22,33 @@ using namespace std;
 
 
 int main(){
-  string juego = "Tetris";
+//segunda parte
+int numero = 10;
+int resultado;
+
+
+
+cout << "Imprimir numero: " << numero << endl;
+resultado = suma10(numero);
+cout << "Imprimir numero despues de sumar10(int): " << numero << endl;
+cout << "Imprimir resultado despues de sumar 10(int): " << resultado << endl;
+
+cout << "Imprimir numero: " << numero << endl;
+resultado = suma10(&numero);
+cout << "Imprimir numero despues de sumar10(*int): " << numero << endl;
+cout << "Imprimir resultado despues de sumar 10(*int): " << resultado << endl;
+
+
+
+/// primera parte
+  /*string juego = "Tetris";
   string &ocio = juego;
   int num = 5;
   //string &ocio = juego;
   //string juegos[5];
 
   string * ptrJuego = &juego;
-  int* ptrNum = &num;
-
+  int* ptrNum = &num;*/
 
 
   /*cout << juego << endl; //Imprime Tetris
@@ -42,7 +69,7 @@ int main(){
   cout << &juegos[4]<< endl;
 */
 
-cout << "Imprimo el juego: " << juego << endl;
+/*cout << "Imprimo el juego: " << juego << endl;
 cout << "Imprimo el juego: " << &juego << endl;
 cout << "Imprimo el juego: " << &ptrJuego << endl;
 cout << "Imprimo el juego: " << ptrJuego << endl;
@@ -51,7 +78,7 @@ cout << "Imprimo el juego: " << num << endl;
 cout << "Imprimo el juego: " << *ptrNum << endl;
 cout << "Imprimo el juego: " << &num << endl;
 cout << "Imprimo el juego: " << ptrNum << endl;
-
+*/
 
   return 0;
 }
