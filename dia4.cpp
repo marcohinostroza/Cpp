@@ -15,6 +15,19 @@ int suma10(int* ptrNum){
 }
 
 
+void colorines(string* colores, int numero){
+  for(int i = 0; i < numero; i++){
+    cout << "Introduce un color: " << endl;
+    //cin >> colores[i];
+    getline(cin, colores[i]);
+  } 
+}
+
+void imprimir(string* colores, int numero){
+  for(int i = 0; i < numero; i++){
+    cout << colores[i] << " " << endl;
+  }
+}
 
 
 
@@ -30,26 +43,41 @@ int numero;
 
 
 
-cout << "Valor de *colores = NULL" << colores << endl;
+//cout << "Valor de *colores = NULL" << colores << endl;
 cout << "Numero de colores: ";
+//cin >> numero;
 getline(cin, line);
 numero = stoi(line);
 
 colores = new string[numero];
-cout << "Valor de colores = new string[]" << colores << endl;
 
-for(int i = 0; i < numero; i++){
+colorines(colores, numero);
+imprimir(colores, numero);
+
+
+//cout << "Valor de colores = new string[]: " << colores << endl;
+
+/*for(int i = 0; i < numero; i++){
   cout << "dime un color: " << endl;
+  //cin >> colores[i];
   getline(cin, colores[i]);
 
-}
+}*/
 
-for(int i = 0; i < numero; i++){
+/*for(int i = 0; i < numero; i++){
   cout << colores[i] << " " << endl;
 }
+*/
+
+
+
+
 
 delete[] colores;
 colores = NULL;
+
+
+
 
 
 
