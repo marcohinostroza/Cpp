@@ -14,6 +14,25 @@ int suma10(int* ptrNum){
   return *ptrNum;
 }
 
+double* rellenarArrayNotas(int tama){
+  double* colores = new double[tama];
+  string line;
+  for(int i = 0; i < tama; i++){
+    cout << "Introduce una nota: " << endl;
+    //cin >> colores[i];
+    getline(cin, line);
+    colores[i] = stod(line);
+  }
+  return colores;
+}
+
+/*double* subirNotaArray(double* array, int tama){
+
+}*/
+
+
+
+
 
 string* colorines(int numero){
   string* colores = new string[numero];
@@ -31,6 +50,12 @@ void imprimir(string* colores, int numero){
   }
 }
 
+void imprimir(double* colores, int numero){
+  for(int i = 0; i < numero; i++){
+    cout << colores[i] << " " << endl;
+  }
+}
+
 
 
 /*-------------------------------------------------------------*/
@@ -39,6 +64,7 @@ void imprimir(string* colores, int numero){
 int main(){
 //Tercera parte
 string* colores = NULL;
+double* notas = NULL;
 string line;
 string entrada;
 int numero;
@@ -46,15 +72,20 @@ int numero;
 
 
 //cout << "Valor de *colores = NULL" << colores << endl;
-cout << "Numero de colores: ";
+cout << "Numero de notas : ";
 //cin >> numero;
 getline(cin, line);
 numero = stoi(line);
 
-colores = new string[numero];
+notas = rellenarArrayNotas(numero);
+imprimir(notas, numero);
 
+/*colores = new string[numero];
 colores = colorines(numero);
 imprimir(colores, numero);
+*/
+
+
 
 
 //cout << "Valor de colores = new string[]: " << colores << endl;
