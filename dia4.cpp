@@ -15,12 +15,14 @@ int suma10(int* ptrNum){
 }
 
 
-void colorines(string* colores, int numero){
+string* colorines(int numero){
+  string* colores = new string[numero];
   for(int i = 0; i < numero; i++){
     cout << "Introduce un color: " << endl;
     //cin >> colores[i];
     getline(cin, colores[i]);
-  } 
+  }
+  return colores;
 }
 
 void imprimir(string* colores, int numero){
@@ -51,7 +53,7 @@ numero = stoi(line);
 
 colores = new string[numero];
 
-colorines(colores, numero);
+colores = colorines(numero);
 imprimir(colores, numero);
 
 
