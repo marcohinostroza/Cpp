@@ -9,7 +9,9 @@ class Persona{
   public:
     // cintructor
     Persona(string nombre = "Pepe", string dni = "125412315", int edad = 18){
-
+      setNombre(nombre);
+      setDni(dni);
+      setEdad(edad);
     }
     // Crea los gets y los sets para poder acceder a los datos.
     void setNombre (string nombre){
@@ -24,8 +26,22 @@ class Persona{
       this->edad = edad;
     }
 
+    string getNombre (){
+      return this->nombre;
+    }
 
-}
+    string getDni(){
+      return this->dni;
+    }
+
+    int getEdad(){
+      return this->edad;
+    }
+
+    //imprimir
+    void imprimir()
+
+};
 
 
 
