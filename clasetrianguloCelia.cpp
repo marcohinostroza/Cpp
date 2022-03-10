@@ -17,7 +17,7 @@ class Triangulo{
 
             return(perimetro-max > max);
         }
-    
+
     public:
         Triangulo(double ladoA = 2, double ladoB = 2, double ladoC = 2, string color = "azul"){
             if (comprobarLongitudLados(lado, this->ladoB, this->ladoC)){
@@ -48,7 +48,7 @@ class Triangulo{
             if (comprobarLongitudLados(lado, this->ladoB, this->ladoC)){
                 if(lado > 0) this->ladoC = lado;
             }
-        } 
+        }
 
         double getLadoA(){
             return this->ladoA;
@@ -65,7 +65,7 @@ class Triangulo{
         void setLados(double ladoA, double ladoB, double ladoC){
             if(comprobarLongitudLados(ladoA, ladoB, ladoC)){
                 if(ladoA > 0) this->ladoA = ladoA;
-                if(ladoB > 0) this->ladoB = ladoB; 
+                if(ladoB > 0) this->ladoB = ladoB;
                 if(ladoC > 0) this->ladoC = ladoC;
             }
         }
@@ -80,7 +80,7 @@ class Triangulo{
         }
 
         void imprimir(){
-            cout << "los lados del triangulo miden: " << this-ladoA << " " << this->lado << " " << this->ladoC;
+            cout << "los lados del triangulo miden: " << this->ladoA << " " << this->lado << " " << this->ladoC;
             cout << "Su perimetro es: " << this->perimetro() << "m" << endl;
             cout << ""
         }
@@ -97,7 +97,7 @@ int main(){
     t.setLadoB
     t.setLadoC
 
-    
-    
+
+
     return 0;
 }

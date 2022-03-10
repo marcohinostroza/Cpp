@@ -8,7 +8,7 @@ class Persona{
     int edad = 18;
   public:
     // cintructor
-    Persona(string nombre = "Pepe", string dni = "125412315", int edad = 18){
+    Persona(string nombre = "Pepe", string dni = "1254123L", int edad = 18){
       setNombre(nombre);
       setDni(dni);
       setEdad(edad);
@@ -23,7 +23,16 @@ class Persona{
     }
 
     void setEdad(int edad){
-      this->edad = edad;
+        this->edad = edad;
+  }
+
+    void posiblementeMayor(){
+      if(this->edad>17){
+        cout << "es mayor" << endl;
+      }
+      else{
+        cout << "no es mayor " << endl;
+      }
     }
 
     string getNombre (){
@@ -39,7 +48,9 @@ class Persona{
     }
 
     //imprimir
-    void imprimir()
+    void imprimir(){
+      cout << "Me llamo " << this->nombre << ", " << "tengo " << this->edad << " años " << "y mi DNI es " << this->dni << endl;
+    }
 
 };
 
@@ -48,5 +59,19 @@ class Persona{
 
 
 int main(){
+
+
+Persona principal;
+principal.imprimir();
+principal.posiblementeMayor();
+
+Persona secundaria("Fulanito", "931294H", 15);
+secundaria.imprimir();
+secundaria.posiblementeMayor();
+
+
+
+
+
 
 }
