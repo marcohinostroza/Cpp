@@ -3,12 +3,17 @@ using namespace std;
 
 class Persona{
   private:
-    string nombre;
-    string DNI;
-    int edad;
-
-
+    string nombre = "Pepe";
+    string dni = "74038487L";
+    int edad = 18;
   public:
+    // cintructor
+    Persona(string nombre = "Pepe", string dni = "125412315", int edad = 18){
+
+    }
+    // Crea los gets y los sets para poder acceder a los datos.
+    void setNombre ()
+
 
 }
 
