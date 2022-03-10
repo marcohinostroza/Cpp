@@ -12,7 +12,17 @@ class Persona{
 
     }
     // Crea los gets y los sets para poder acceder a los datos.
-    void setNombre ()
+    void setNombre (string nombre){
+      this->nombre = nombre;
+    }
+
+    void setDni(string dni){
+      this->dni = dni;
+    }
+
+    void setEdad(int edad){
+      this->edad = edad;
+    }
 
 
 }
