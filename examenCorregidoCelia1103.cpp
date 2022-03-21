@@ -1,5 +1,3 @@
-//Marco Antonio Alfoncio Hinostroza
-
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -9,14 +7,15 @@ class Persona{
     string nombre;
     string dni;
     int edad;
-
+    bool vip;
     
   public:
     // cintructor
-    Persona(string nombre = "Pepe", string dni = "1254123L", int edad = 18){
+    Persona(string nombre = "Celia", string dni = "1254123L", int edad = 18, vector<int> v = {1,1,1}){
       setNombre(nombre);
       setDni(dni);
       setEdad(edad);
+      this->vip = vipONo(v);
     }
     // Crea los gets y los sets para poder acceder a los datos.
     void setNombre (string nombre){
@@ -31,9 +30,13 @@ class Persona{
         this->edad = edad;
     }
 
+    void setVip(bool vip){
+      this->vip = vip;
+    }
+
     //metodos
     void posiblementeMayor(){
-      if(this->edad>=18){
+      if(this->edad>17){
         cout << "es mayor" << endl;
       }
       else{
@@ -41,6 +44,32 @@ class Persona{
       }
     }
 
+    bool vipONo(vector <int> v){
+      bool x = false;
+      int suma = 0;
+      int y;
+      
+      for(int i : v){
+        suma+=i;
+      }
+
+      if(suma % 11 == 0){
+        x = true;
+      }else if(suma % 13 == 0){
+        cout << "Que numero quieres: ";
+        cin >> y;
+        suma+=y;
+        cout << "Que otro numero quieres: ";
+        cin >> y;
+        suma+=y;
+      }
+
+      if(suma % 11 == 0){
+        x = true;
+      }     
+
+      return x;
+    }
 
     //creando gets
     string getNombre (){
@@ -55,16 +84,15 @@ class Persona{
       return this->edad;
     }
 
-    //imprimir
-    void imprimir(){
-      cout << "Me llamo " << this->nombre << ", " << "tengo " << this->edad << " años " << "y mi DNI es " << this->dni << endl;
+    int getVip(){
+      return this->vip;
     }
 
-    /*void imprimirVector(vector<double> v){
-      for(int i= 0; i < v.size(); i++){
-        cout << v[i] << endl;
-      }
-    }*/
+    //imprimir
+    void imprimir(){
+      cout << "Me llamo " << this->nombre << ", " << "tengo " << this->edad << " años " << "y mi DNI es " << this->dni << " y vip (" << this->vip << ")" << endl;
+    }
+
 
 
 };
@@ -74,16 +102,17 @@ class Persona{
 
 
 int main(){
+  vector <int> v = {9,1,3};
 
   Persona principal;
   principal.imprimir();
   principal.posiblementeMayor();
 
-  Persona secundaria("Fulanito", "931294H", 15);
+  Persona secundaria("Issac", "931294H", 21, v);
   secundaria.imprimir();
   secundaria.posiblementeMayor();
 
-
+ 
 
   return 0;  
 }
